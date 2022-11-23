@@ -6,7 +6,6 @@ const bcrypt = require("bcrypt");
 const initialize = require("../config/passport-config");
 const passport = require("passport");
 const errorController = require("./errorController");
-const { send } = require("express/lib/response");
 
 initialize(passport);
 

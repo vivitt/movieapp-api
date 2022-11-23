@@ -7,7 +7,7 @@ const app = express();
 // const passport = require('passeport')
 const userModel = require("../models/User");
 const movieModel = require("../models/Movie");
-const { message } = require("prompt");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
