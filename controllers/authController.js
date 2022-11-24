@@ -13,6 +13,8 @@ function getUser(req, res) {
   res.status(200).json({
     email: req.user.email,
     name: req.user.name,
+
+    favMovies: req.user.favMovies,
   });
 }
 async function registerNewUser(req, res, next) {
