@@ -20,10 +20,10 @@ const port = process.env.PORT || 3001;
 const cors = require("cors");
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://vivittmovieapp.netlify.app/"
-  );
+  res.header("Access-Control-Allow-Origin", [
+    "https://vivittmovieapp.netlify.app/",
+    "https://vivitt.github.io",
+  ]);
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.header(
     "Access-Control-Allow-Headers",
@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 
 app.use(
   cors({
-    origin: ["https://vivittmovieapp.netlify.app/"],
+    origin: ["https://vivittmovieapp.netlify.app/", "https://vivitt.github.io"],
     credentials: true,
     allowedHeaders: ["Origin, X-Requested-With, Content-Type, Accept"],
   })
