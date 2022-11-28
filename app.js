@@ -7,6 +7,7 @@ const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const errorController = require("./controllers/errorController");
+const path = require("path");
 // routes
 const moviesRoutes = require("./routes/movies");
 const usersRoutes = require("./routes/users");
