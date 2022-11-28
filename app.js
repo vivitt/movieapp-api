@@ -31,7 +31,10 @@ app.use(function (req, res, next) {
 
 app.use(
   cors({
-    origin: ["https://vivittmovieapp.netlify.app", "https://vivitt.github.io"],
+    origin: [
+      "https://vivittmovieapp.netlify.app/",
+      "https://vivitt.github.io/",
+    ],
     credentials: true,
     allowedHeaders: ["Origin, X-Requested-With, Content-Type, Accept"],
   })
@@ -42,18 +45,10 @@ dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 //passport
 app.use(passport.initialize());
-
-// SESSION BEFORE
-// app.use(session({
-//   secret: process.env.SESSION_KEY,
-//   resave: false,
-//   saveUninitialized: false,
-//   cookie: { maxAge: 60 * 60 * 1000 } //1hour
-// }))
 
 // SESSION AFTER
 const sessionStore = new MongoStore({
