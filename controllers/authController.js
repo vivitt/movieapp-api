@@ -10,21 +10,13 @@ const errorController = require("./errorController");
 initialize(passport);
 
 function getUser(req, res) {
-  const user = {
+  res.status(200).json({
     email: req.user.email,
     name: req.user.name,
     favMovies: req.user.favMovies,
-  };
-  if (user.email) {
-    res.status(200).json({
-      email: req.user.email,
-      name: req.user.name,
-      favMovies: req.user.favMovies,
-    });
-  } else {
-    res.send("no user");
-  }
+  });
 }
+
 async function registerNewUser(req, res, next) {
   try {
     // const hashedPassword = await bcrypt.hash(req.body.password, 10);
