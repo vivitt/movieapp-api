@@ -16,8 +16,8 @@ function getUser(req, res) {
       name: req.user.name,
       favMovies: req.user.favMovies,
     });
-  } catch {
-    res.send(404);
+  } catch (err) {
+    res.sendStatus(404);
   }
 }
 
