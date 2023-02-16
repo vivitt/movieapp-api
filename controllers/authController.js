@@ -20,7 +20,7 @@ function getUser(req, res) {
     res.status(404).send({
       email: "",
       name: "",
-      favMovies: "",
+      favMovies: [],
     });
   }
 }
@@ -59,6 +59,7 @@ function loginUser(req, res, next) {
         res.status(200).json({
           email: user.email,
           name: user.name,
+          favMovies: user.favMovies,
         });
       });
     }
