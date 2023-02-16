@@ -17,7 +17,11 @@ function getUser(req, res) {
       favMovies: req.user.favMovies,
     });
   } catch (err) {
-    res.sendStatus(404);
+    res.status(404).json({
+      email: "",
+      name: "",
+      favMovies: "",
+    });
   }
 }
 
