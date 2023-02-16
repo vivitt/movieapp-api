@@ -11,13 +11,13 @@ initialize(passport);
 
 function getUser(req, res) {
   try {
-    res.status(200).json({
+    res.status(200).send({
       email: req.user.email,
       name: req.user.name,
       favMovies: req.user.favMovies,
     });
   } catch (err) {
-    res.status(404).json({
+    res.status(404).send({
       email: "",
       name: "",
       favMovies: "",
