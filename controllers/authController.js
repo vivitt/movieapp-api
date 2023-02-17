@@ -10,19 +10,11 @@ const errorController = require("./errorController");
 initialize(passport);
 
 function getUser(req, res) {
-  try {
-    res.status(200).send({
-      email: req.user.email,
-      name: req.user.name,
-      favMovies: req.user.favMovies,
-    });
-  } catch (err) {
-    res.status(404).send({
-      email: "",
-      name: "",
-      favMovies: [],
-    });
-  }
+  res.status(200).send({
+    email: req.user.email,
+    name: req.user.name,
+    favMovies: req.user.favMovies,
+  });
 }
 
 async function registerNewUser(req, res, next) {
