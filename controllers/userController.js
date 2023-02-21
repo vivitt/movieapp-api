@@ -29,7 +29,7 @@ async function getFavorites(req, res) {
         rating: "",
       });
   } catch (err) {
-    console.log(err);
+    res.send(err);
   }
 }
 
