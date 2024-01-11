@@ -2,6 +2,7 @@
 <h1>movieapp-api</h1>
 <h3>Node.js, Express.js and MongoDB</h3>
 </div>
+
 API created for one of my [Web Dev Bootcamp's projects](https://vivittmovieapp.netlify.app/).
 
 It is a Node.js project connected with a MongoDB cluster.
