@@ -3,7 +3,7 @@
 <h3>Node.js, Express.js and MongoDB</h3>
 </div>
 
-API created for one of my [Web Dev Bootcamp's projects](https://vivittmovieapp.netlify.app/).
+API created for one of my [Web Dev Bootcamp's projects](https://github.com/vivitt/movie-app/tree/main).
 
 It is a Node.js project connected with a MongoDB cluster.
 
